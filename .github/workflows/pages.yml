@@ -4,7 +4,7 @@ name: Pages
 on:
   push:
     branches:
-      - master  # default branch
+      - gh-pages  # default branch
 jobs:
   # 子任务
   pages:
@@ -56,9 +56,9 @@ jobs:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY  }}
-          user_name: xiao
-          user_email: allblue95@126.com
+          deploy_key: ${{ secrets.PAGES_BUILD_AND_DEPLOYMENT  }}
+          user_name: ZophiaWong
+          user_email: 1357252974@qq.com
           # 获取提交文章源码时的commit message，作为发布gh-pages分支的信息
           commit_message: ${{ github.event.head_commit.message }}
           full_commit_message: ${{ github.event.head_commit.message }}
